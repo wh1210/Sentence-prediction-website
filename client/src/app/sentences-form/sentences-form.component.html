@@ -1,0 +1,23 @@
+<div>
+    <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+
+        <div>
+          <label for="sentence1">
+            The first sentence
+          </label>
+          <input id="sentence1" type="text" formControlName="sentence1">
+        </div>
+      
+        <div>
+          <label for="sentence2">
+            The second sentence
+          </label>
+          <input id="sentence2" type="text" formControlName="sentence2">
+        </div>
+      
+        <button class="button" type="submit">
+                Predict
+        </button>
+      
+      </form>
+</div>
