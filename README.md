@@ -13,9 +13,11 @@ This is a project to deploy a machine learning model on an interative website. W
 ## Training frameworks or packages:
   * PyTorch 1.7.1
   * simpletransformers (include many other packages) 
-## Instruction to install:
+
+To install the package:
   ```python
 pip install (package name)
 ```
+Here is the [link](https://drive.google.com/drive/folders/1gdVBBmWJr41aL_okI8I84gRZSzfr3e89?usp=sharing) of model we trained based on Roberta. And if you want to use your data to train, replace the data path with yours in train.py and predict.py. 
   
   
