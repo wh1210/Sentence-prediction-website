@@ -15,7 +15,8 @@ This is a project to deploy a machine learning model on an interative website. W
   * 'num_train_epochs': 15,
   * 'evaluate_during_training_steps': 50,
   * 'wandb_project': 'sts-b-medium',
-  * 'train_batch_size': 32
+  * 'train_batch_size': 32 
+  
 The training time is around 2 hours in this setting.
 ## Training frameworks or packages:
   * PyTorch 1.7.1
