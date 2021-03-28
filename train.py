@@ -16,7 +16,7 @@ train_args = {
     'overwrite_output_dir': True,
     'evaluate_during_training': True,
     'max_seq_length': 512,
-    'num_train_epochs': 3,
+    'num_train_epochs': 15,
     'evaluate_during_training_steps': 50,
     'wandb_project': 'sts-b-medium',
     'train_batch_size': 32,
