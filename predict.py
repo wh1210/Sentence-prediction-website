@@ -4,9 +4,6 @@ from simpletransformers.classification import (
 import pandas as pd
 
 
-eval_df = pd.read_csv('twitter_data/dev_final.tsv', sep='\t', error_bad_lines=False)
-eval_df = eval_df.rename(columns={'sentence1': 'text_a', 'sentence2': 'text_b', 'score': 'labels'}).dropna()
-
 model = ClassificationModel('roberta', './models')
 
 predictions, raw_outputs = model.predict(
