@@ -4,7 +4,7 @@ from simpletransformers.classification import (
 import pandas as pd
 
 
-model = ClassificationModel('roberta', './models')
+model = ClassificationModel('roberta', './models', use_cuda=False)
 
 predictions, raw_outputs = model.predict(
     [

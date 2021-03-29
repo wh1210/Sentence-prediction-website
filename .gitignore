@@ -47,3 +47,6 @@ Thumbs.db
 
 .editorconfig
 .browserslistrc
+
+# Cache
+__pycache__/
