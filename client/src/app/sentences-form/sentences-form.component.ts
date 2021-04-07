@@ -10,6 +10,7 @@ import { PredictionService } from '../prediction.service';
   templateUrl: './sentences-form.component.html',
   styleUrls: ['./sentences-form.component.css']
 })
+
 export class SentencesFormComponent implements OnInit {
   checkoutForm = this.formBuilder.group({
     sentence1: ["", [Validators.required, Validators.minLength(1)]],
@@ -31,8 +32,16 @@ export class SentencesFormComponent implements OnInit {
       return;
     }
 
-    this.predictionService.predict(this.checkoutForm.value.sentence1, this.checkoutForm.value.sentence2)
-    this.router.navigate(['/feedback']);
+    let prediction = this.predictionService.predict(this.checkoutForm.value.sentence1, this.checkoutForm.value.sentence2)
+    let result = 'sentence1'
+    if (prediction >= 0.05) result = 'sentence2'
+    console.log(prediction)
+    this.router.navigate(['/feedback'], {queryParams: {
+      sentence1: this.checkoutForm.value.sentence1,
+      sentence2: this.checkoutForm.value.sentence2,
+      prediction: prediction,
+      result: result
+    }});
   }
 
 }

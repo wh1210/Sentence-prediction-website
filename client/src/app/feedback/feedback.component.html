@@ -1,1 +1,49 @@
-<p>feedback works!</p>
+<div class="container" style="margin-top: 70px;">
+
+    <div class="jumbotron" style="background-color: #fff;">
+      <h1>Which sentence is better?</h1>
+
+      <p class="lead">Here are what we got from you:</p>
+      <ul>
+          <li style="font-size: 20px;">Sentence1: {{ sentence1 }}</li>
+          <li style="font-size: 20px;">Sentence2: {{ sentence2 }}</li>
+      </ul>
+  
+      <p class="lead">Based on our prediction, {{ result }} have <b>{{ (1 - (prediction||0)) * 100 }}%</b> probobilities to be better.</p>
+  
+      <br>
+
+      <p class="lead">
+        Please tell us if you strong disagree with the prediction, and choose the one you think is better!
+      </p>
+
+      <br>
+
+      <div class="form-group">
+          <form [formGroup]="feedbackForm" (ngSubmit)="onSubmit()">
+  
+              <div>
+                  <mat-form-field appearance="fill">
+                      <mat-label>Which is better?</mat-label>
+                      <mat-select formControlName="feedback">
+                      <mat-option *ngFor="let choice of choices" [value]='choice'>
+                          {{ choice }}
+                      </mat-option>
+                      </mat-select>
+                  </mat-form-field>
+              </div>
+      
+              <br>
+            
+              <button class="button btn btn-primary" type="submit">
+                      Submit Feedback
+              </button>
+            
+            </form>
+        </div>
+  
+    </div>
+
+
+
+</div>

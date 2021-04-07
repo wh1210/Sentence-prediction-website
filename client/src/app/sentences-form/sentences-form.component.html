@@ -1,23 +1,47 @@
-<div>
-    <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+<div class="container" style="margin-top: 70px;">
 
-        <div>
-          <label for="sentence1">
-            The first sentence
-          </label>
-          <input id="sentence1" type="text" formControlName="sentence1">
-        </div>
-      
-        <div>
-          <label for="sentence2">
-            The second sentence
-          </label>
-          <input id="sentence2" type="text" formControlName="sentence2">
-        </div>
-      
-        <button class="button" type="submit">
-                Predict
-        </button>
-      
-      </form>
+  <div class="jumbotron" style="background-color: #fff;">
+    <h1>Which sentence is better?</h1>
+    <p class="lead">
+      Try input two sentences <b>in one topic</b>, and checkout which sentence is better in our algorithm. Our algorithm model is trained based on twitter <a href="http://localhost:4200/">data</a>.
+    </p>
+
+    <p class="lead">For example:</p>
+    <ul>
+        <li style="font-size: 16px;">Sentence1: Topic Sentence: There are many reasons why pollution in ABC Town is the worst in the world.</li>
+        <li style="font-size: 16px;">Sentence2: The topic is "pollution in ABC Town is the worst in the world" and the controlling idea is "many reasons."</li>
+    </ul>
+
+    <p class="lead">Now let's try input our own sentences!</p>
+
+    <br>
+
+    <div class="form-group">
+      <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+  
+          <div>
+            <label class="lead" for="sentence1">
+              The first sentence:
+            </label>
+            <input id="sentence1" class="form-control" type="text" formControlName="sentence1" placeholder="Enter first sentence" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+          </div>
+  
+          <br>
+        
+          <div>
+            <label class="lead" for="sentence2">
+              The second sentence:
+            </label>
+            <input id="sentence2" class="form-control" type="text" formControlName="sentence2" placeholder="Enter second sentence" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+          </div>
+  
+          <br>
+        
+          <button class="button btn btn-primary" type="submit">
+                  Predict
+          </button>
+        
+        </form>
+    </div>
+  </div>
 </div>
