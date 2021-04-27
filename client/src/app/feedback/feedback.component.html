@@ -8,9 +8,16 @@
           <li style="font-size: 20px;">Sentence1: {{ sentence1 }}</li>
           <li style="font-size: 20px;">Sentence2: {{ sentence2 }}</li>
       </ul>
-  
-      <p class="lead">Based on our prediction, {{ result }} have <b>{{ (1 - (prediction||0)) * 100 }}%</b> probobilities to be better.</p>
-  
+      
+      <p *ngIf= "prediction==1; then ifBlock else elseBlock">
+      </p>
+      <ng-template #ifBlock>
+          <p class="lead">Based on the input, they are the same. <a routerLink="/">Retry</a></p>
+      </ng-template>
+      <ng-template #elseBlock>
+        <p class="lead">Based on our prediction, {{ result }} have <b>{{ (1 - (prediction||0)) * 100 }}%</b> probobilities to be better.</p>  
+      </ng-template>
+
       <br>
 
       <p class="lead">
@@ -38,7 +45,8 @@
               <button class="button btn btn-primary" type="submit">
                       Submit Feedback
               </button>
-            
+
+              
             </form>
         </div>
   
