@@ -1,4 +1,5 @@
-# Sentence predicetion website
+# [Sentence predicetion website](https://sentences-prediction.df.r.appspot.com/)
+
 ## Description:
 This is a project to deploy a machine learning model on an interative website. We decide to use twitter's topic and author controlled dataset to train a language model based on Roberta as the pre-trained part. After training, we will deploy on the cloud computing platform. And then, using flask to communicate with the front-end and get user's input to compute the probabilities of distribution. Finally, fetch the result back to the front-end. 
 ## Model part:
@@ -35,6 +36,7 @@ python predict.py```
 And one more trick part here, because my training environment and predict environment are different (Pytorch version, etc) Here is the environment [requirement](https://github.com/wh1210/Sentence-prediction-website/blob/main/requirement.txt) to install before prediction. ([Error Reference](https://github.com/ultralytics/yolov5/issues/776))
 
 ## Deployment part
+The project is deployed on GCP, using Google App Engine. The website is [here](https://sentences-prediction.df.r.appspot.com/).
 
 
   
