@@ -35,8 +35,16 @@ Before run ```
 python predict.py```
 And one more trick part here, because my training environment and predict environment are different (Pytorch version, etc) Here is the environment [requirement](https://github.com/wh1210/Sentence-prediction-website/blob/main/requirement.txt) to install before prediction. ([Error Reference](https://github.com/ultralytics/yolov5/issues/776))
 
+## Front-end part
+We are using Angular.js, TypeScript, etc to do the front-end development. Basically it can be divided into several components you can see in the client/src/app folder.
+
+## Back-end part
+We are using the Flask to implement our back-end server in a RESTful way. The front-end call the API, and the server run some predictions in the model then return it back. The overall back-end is in /server folder.
+
 ## Deployment part
 The project is deployed on GCP, using Google App Engine. The website is [here](https://sentences-prediction.df.r.appspot.com/).
+
+
 
 
   

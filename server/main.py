@@ -19,13 +19,13 @@ def predict_sentence():
     sentence1 = request.args.get('sentence1')
     sentence2 = request.args.get('sentence2')
 
-    # prediction, result = predict(sentence1, sentence2)
+    prediction, result = predict(sentence1, sentence2)
 
     return {
         "sentence1": sentence1,
         "sentence2": sentence2,
-        # "prediction": prediction,
-        # "result": result,
+        "prediction": prediction,
+        "result": result,
     }
 
 
